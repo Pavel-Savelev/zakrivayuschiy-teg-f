@@ -12,3 +12,103 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+@keyframes sparks-effect{
+  from{
+    fill:transparent;
+  }
+  to{
+    fill: red;
+  }
+}
+
+@keyframes scale-up{
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.5);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+@keyframes moving {
+    from {
+      transform:translateX(0%) ;
+    }
+  
+    to {
+      transform:translateX(30%)
+    }
+  }
+
+@keyframes increase-size {
+    from {
+      
+    }
+  
+    to {
+      transform:scaleX(1);
+      transform-origin: right;
+    }
+  }
+/* hover */
+  .like-icon .core {
+    transition: fill 0.3s 0.03s linear;
+  }
+  
+  .like-icon .main-body {
+    transition: fill 0.3s linear;
+  }
+
+.like-icon:hover .core{
+    fill:black;
+    transition: fill 0.3s linear;
+    
+  }
+  
+.like-icon:hover .main-body{
+    fill:black;
+    transition: fill 0.3s 0.05s linear;
+}
+
+/* avtive */
+.like-icon:active .core{
+  fill:red;
+  transition: fill 0.3s linear;
+  
+}
+
+.like-icon:active .main-body{
+  fill:red;
+  transition: fill 0.3s 0.05s linear;
+}
+
+/* animation */
+.like-icon.is-liked .contour{
+  fill:red;
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body{
+  fill:red;
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .core {
+  fill:red;
+  transition: fill 0.3s linear;
+}
+
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: scale-up 0.3s 0.1s ease-in alternate;
+}
+
+.like-icon.is-liked .sparks {
+  transform-origin: center;
+  animation: sparks-effect 0.3s 0.1s ease-in alternate;
+}
+

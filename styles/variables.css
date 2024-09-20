@@ -1,1 +1,41 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --font-family-Press-Start-2P: "Press Start 2P";
+  --font-family-Inter-Variable: "Inter Variable";
+  --dialog-background-light: rgba(255, 255, 255, 1);
+  --dialog-background-black: rgba(0, 0, 0, 1);
+  --color-text-light: rgba(0, 0, 0, 1);
+  --color-text-dark: rgba(0, 204, 20, 1);
+  --header-background-dark:black;
+  --border-dark:rgba(0, 204, 20, 1);
+  --border-light:#000;
+  --header-background-light:rgba(255, 255, 255);
+  --main-background-dark:rgba(0, 0, 0, 1);
+  --main-background-light:rgba(255, 255, 255, 1);
+  --accent-color-dark:rgba(0, 204, 20, 1);
+  --accent-color-light:rgba(0, 0, 0, 1);
+  --button-background-dark:rgba(0, 0, 0, 1);
+  --button-background-light:rgba(255, 255, 255, 1);
+  --floppy-color-dark:rgba(0, 204, 20, 1);
+  --floppy-color-light:rgba(0, 0, 0, 1);
+  --button-text-dark:black;
+  --button-text-light:white;
+  --heart-contour-color-dark:rgba(0, 204, 20, 1);
+  --red:rgba(255, 0, 0, 1);
+  --heart-contour-color-light:rgba(0, 0, 0, 1);
+  --heart-sparks:var(--red);
+  --body-backround-light: repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0 2px,
+      rgba(0, 0, 0, 0) 2px 4px
+    ),
+    repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgba(0, 0, 0, 0) 2px 4px),
+    linear-gradient(180deg, #e7e7e7 0%, #1a1a1a 100%);
+  --body-backround-dark: repeating-linear-gradient(
+      90deg,
+      #000 0 2px,
+      rgba(0, 0, 0, 0) 2px 4px
+    ),
+    repeating-linear-gradient(180deg, #000 0 2px, rgba(0, 0, 0, 0) 2px 4px),
+    linear-gradient(180deg, #007f0c 0%, #004306 100%);
+}
