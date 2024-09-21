@@ -1,5 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
+  --themes-font-weight-title: 785;
+  --themes-font-weight-content: 465;
   --font-family-Press-Start-2P: "Press Start 2P";
   --font-family-Inter-Variable: "Inter Variable";
   --dialog-background-light: rgba(255, 255, 255, 1);
