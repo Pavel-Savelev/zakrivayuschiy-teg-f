@@ -41,6 +41,10 @@
   align-items: center;
 }
 
+.header__theme-menu{
+    padding-left: 5px;
+    width: 84px;
+}
 
 .header-container{
   margin-top: 120px;
@@ -65,7 +69,6 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  width: 90px;
   text-align: left;
 }
 
@@ -154,12 +157,17 @@
 }
 
 .content-head {
-  font-variation-settings: "wdth" (var(--themes-font-weight-title));
-  line-height: 21.78px;
+  font-variation-settings: "wght" (var(--themes-font-weight-title));
   padding-left: 10px;
+  padding-right: 10px;
+  line-height: 21.78px;
   padding-bottom: 3.5px;
   padding-top: 5.5px;
   border-bottom: 2px solid var(--accent-color);
+}
+
+.content-head-title{
+  font-size: 18px;
 }
 
 .gray-image {
@@ -245,7 +253,7 @@
   flex-direction: column;
   gap: 27px;
   padding: 25px;
-  font-variation-settings: "wdth" var(--themes-font-weight-content);
+  font-variation-settings: "wght" var(--themes-font-weight-content);
   line-height: 21px;
   border-top: 2px solid var(--accent-color);
 }
@@ -268,7 +276,7 @@
 }
 
 .card__like-button {
-  margin: 0 25px 0 12px;
+  margin: 0 25px 0 6px;
   min-width: 130px;
   min-height: 38px;
 }
@@ -306,8 +314,18 @@
 .card__icon-button {
   display: flex;
   align-items: center;
-  border: none;
+  transition: border 0.3s ease;
+  border: 2px solid transparent;
   background-color: var(--button-background);
+}
+
+.card__icon-button:focus{
+  outline: none;
+  border: none;
+}
+
+.card__icon-button:focus-visible{
+  border: 2px solid var(--accent-color);
 }
 
 .main-footer {
@@ -468,6 +486,8 @@ dialog::backdrop {
     max-width: 700px;
   }
 
+
+
   .header-title{
     line-height: 65px;
   }
@@ -486,7 +506,11 @@ dialog::backdrop {
 
   .content-head{
     padding-bottom: 3px;
-    padding-top: 3px;
+    padding-top: 4px;
+  }
+
+  .wrapper-label{
+    right: 25px;
   }
 
   .footer-button {
