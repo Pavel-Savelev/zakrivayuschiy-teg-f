@@ -29,7 +29,7 @@
 .header {
   margin-top: 100px;
   width: 100%;
-  padding-bottom:25px;
+  padding-bottom: 25px;
   border: 2px solid var(--header-border);
   text-align: center;
   font-family: var(--font-family-Press-Start-2P), Arial, Helvetica, sans-serif;
@@ -41,12 +41,12 @@
   align-items: center;
 }
 
-.header__theme-menu{
-    padding-left: 5px;
-    width: 84px;
+.header__theme-menu {
+  padding-left: 10px;
+  width: 84px;
 }
 
-.header-container{
+.header-container {
   margin-top: 120px;
 }
 
@@ -129,7 +129,6 @@
 
 .main {
   margin-top: 100px;
-  
 }
 
 .main_button-style {
@@ -141,7 +140,7 @@
   z-index: 1;
   background-color: var(--button-background);
   border: 2px solid var(--accent-color);
-} 
+}
 
 .content {
   font-family: var(--font-family-Inter-Variable), Arial, Helvetica, sans-serif;
@@ -152,12 +151,11 @@
   border: 2px solid var(--accent-color);
 }
 
-.content:last-of-type{
+.content:last-of-type {
   margin-bottom: 0px;
 }
 
 .content-head {
-  font-variation-settings: "wght" (var(--themes-font-weight-title));
   padding-left: 10px;
   padding-right: 10px;
   line-height: 21.78px;
@@ -166,8 +164,9 @@
   border-bottom: 2px solid var(--accent-color);
 }
 
-.content-head-title{
+.content-head-title {
   font-size: 18px;
+  font-variation-settings: "wght" var(--themes-font-weight-title);
 }
 
 .gray-image {
@@ -281,7 +280,9 @@
   min-height: 38px;
 }
 
-.card__like-button::before {
+.footer-button::before,
+.card__like-button::before,
+.dialog-content-button::before {
   content: "";
   position: absolute;
   transform: scaleX(0);
@@ -295,6 +296,8 @@
   transform-origin: left;
 }
 
+.dialog-content-button:hover::before,
+.footer-button:hover::before,
 .card__like-button:hover::before {
   content: "";
   width: 100%;
@@ -303,11 +306,15 @@
   transform: scaleX(1);
 }
 
-.card__like-button:focus {
+.footer-button:focus,
+.card__like-button:focus,
+.dialog-content-button:focus {
   outline: none;
 }
 
-.card__like-button:focus-visible {
+.dialog-content-button:focus-visible,
+.card__like-button:focus-visible,
+.footer-button:focus-visible {
   box-shadow: 2px 2px 0px 0px var(--accent-color);
 }
 
@@ -319,12 +326,12 @@
   background-color: var(--button-background);
 }
 
-.card__icon-button:focus{
+.card__icon-button:focus {
   outline: none;
   border: none;
 }
 
-.card__icon-button:focus-visible{
+.card__icon-button:focus-visible {
   border: 2px solid var(--accent-color);
 }
 
@@ -361,22 +368,6 @@
   transition: 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
-}
-
-.footer-button:hover::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  transform-origin: 0;
-  transform: scaleX(1);
-}
-
-.footer-button:focus {
-  outline: none;
-}
-
-.footer-button:focus-visible {
-  box-shadow: 2px 2px 0px 0px var(--accent-color);
 }
 
 .dialog {
@@ -433,43 +424,12 @@ dialog::backdrop {
   text-transform: uppercase;
 }
 
-
-.dialog-content-button::before {
-  content: "";
-  position: absolute;
-  transform: scaleX(0);
-  height: 100%;
-  width: 0px;
-  left: 0;
-  bottom: 0;
-  background-color: var(--accent-color);
-  transition: 0.5s ease-in-out;
-  transform: scaleX(0);
-  transform-origin: left;
-}
-
-.dialog-content-button:hover::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  transform-origin: 0;
-  transform: scaleX(1);
-}
-
-.dialog-content-button:focus {
-  outline: none;
-}
-
-.dialog-content-button:focus-visible {
-  box-shadow: 2px 2px 0px 0px var(--accent-color);
-} 
-
 .dialog {
   border: 2px solid var(--dialog-border);
   background: var(--dialog-background);
 }
 
-.floppy_svg{
+.floppy_svg {
   width: 28px;
   height: 28px;
 }
@@ -482,34 +442,33 @@ dialog::backdrop {
     align-items: center;
     justify-content: center;
   }
+
   .header {
     max-width: 700px;
   }
 
-
-
-  .header-title{
+  .header-title {
     line-height: 65px;
   }
 
-  .header-title-name{
+  .header-title-name {
     line-height: 23px;
   }
 
-  .header-container{
+  .header-container {
     margin-top: 136px;
- }
+  }
 
   .main {
     max-width: 696px;
   }
 
-  .content-head{
+  .content-head {
     padding-bottom: 3px;
     padding-top: 4px;
   }
 
-  .wrapper-label{
+  .wrapper-label {
     right: 25px;
   }
 
@@ -519,25 +478,24 @@ dialog::backdrop {
     flex-direction: row;
   }
 
-  .floppy_svg{
+  .floppy_svg {
     width: 21px;
     height: 21px;
   }
 
-  .dialog{
+  .dialog {
     max-width: 353px;
   }
-  
-  .form-dialog{
+
+  .form-dialog {
     margin: 30px;
   }
 
-  .dialog-content-text{
+  .dialog-content-text {
     min-width: 234px;
   }
 
-  .dialog-content-button{
+  .dialog-content-button {
     width: 293px;
   }
-  
 }
